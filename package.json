@@ -1,0 +1,28 @@
+{
+  "name": "event-reg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --legacy-peer-deps --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "body-parser": "^1.20.2",
+    "concurrently": "^7.6.0",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.20",
+    "react-router-dom": "^6.8.1",
+    "sendgrid": "^5.2.3",
+    "stripe": "^11.12.0"
+  }
+}
